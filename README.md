@@ -2,7 +2,7 @@
 Official Implementation of "Semi-Siamese Network for Robust Change Detection Across Different Domains with Applications to 3D Printing"
 
 ## Network
-<img src=https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/model_architecture.png width="500" height="400"> 
+<img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/model_architecture.png' width="500" height="400"> 
 
 ## Installition
 Create a conda environment:
@@ -16,9 +16,9 @@ Install pytorch based on your cuda version:
 nvidia-smi
 ```
 
-<img src='https://github.com/niuyushuo/Change-Detection-for-filamentous-Carbon/blob/main/images/smi.png' width="500" height="400">
+<img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/smi.png' width="500" height="400">
 
-<img src='https://github.com/niuyushuo/Change-Detection-for-filamentous-Carbon/blob/main/images/pytorch.png' width="400" height="200">
+<img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/pytorch.png' width="400" height="200">
 
 Install pytorch:
 ```
