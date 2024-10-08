@@ -42,7 +42,7 @@ conda install anaconda::openpyxl
 7. Run predict_whu.py.
 ### Train Semi-Siamese model
 1. At Sia_train folder, update the path where save the whu_dataset in data_config.py.
-2. At models folder, set Semi-Siam (with init), Siamese (with init), and Semi-Siam (without init) to train the models you want at train_sia.py
+2. At models folder, set Semi-Siam (with init), Siamese (with init), and Semi-Siam (without init) to train the models you want at train_sia.py.
 3. At Sia_train folder, run main_train.py.
 4. For the model with initialization, update the path to the trained Unet model in semi_with_weights.py or siamese_with_weights.py.
 6. To test trained performance and make prediction plots, update path of trained model in evaluator_sia.py.
