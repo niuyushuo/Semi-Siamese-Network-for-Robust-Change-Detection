@@ -29,6 +29,11 @@ conda install anaconda::pandas
 conda install anaconda::scikit-learn
 conda install anaconda::seaborn
 conda install anaconda::openpyxl
+```
 
 ## For WHU dataset
 ### Train Unet
+1. Download dataset at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L
+2. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset
+3. Run_cd.py to train Unet.
+### Train Semi-Siamese model
