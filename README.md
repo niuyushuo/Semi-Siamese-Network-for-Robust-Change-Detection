@@ -1,6 +1,9 @@
 # Semi-Siamese-Network-for-Robust-Change-Detection
 Official Implementation of "Semi-Siamese Network for Robust Change Detection Across Different Domains with Applications to 3D Printing"
 
+## Network
+<img src="https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/sia_two_four_class%20.png" width="500" height="400">
+
 ## Installition
 Create a conda environment:
 ```
