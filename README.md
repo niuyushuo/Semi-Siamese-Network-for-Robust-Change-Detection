@@ -34,11 +34,19 @@ conda install anaconda::openpyxl
 ## For WHU dataset
 ### Train Unet
 1. Download dataset at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
-2. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset.
-3. Run_cd.py to train Unet.
-4. If you want to check the trained Unet model's performance, run predict_whu.py.
+2. Unzip crop_img.zip and whu_dataset.zip.
+3. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset. (Or just use the cropped images at crop_img folder)
+4. At train main_cd.py, update the path where save cropped images.
+5. Run main_cd.py to train Unet.
+6. If need to check the trained Unet model's performance, update the path where save whu_dataset.
+7. Run predict_whu.py.
 ### Train Semi-Siamese model
 1. At Sia_train folder, run main_train.py.
-2. At models folder, run main_train.py to train model. Set Semi-Siam (with init), Siamese (with init), and Semi-Siam (without init) to train the models you want.
+2. At models folder, et Semi-Siam (with init), Siamese (with init), and Semi-Siam (without init) to train the models you want at train_sia.py
 3. For the model with initialization, the path to the trained Unet model needs to be updated.
 4. To test trained performance and make prediction plots, run main_pred.py.
+
+## Test the models trained in the paper
+1. Download save_model.zip at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
+2. Unzip save_model.zip.
+3. Update the path to save_model folder
