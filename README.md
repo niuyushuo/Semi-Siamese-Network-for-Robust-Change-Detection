@@ -33,7 +33,12 @@ conda install anaconda::openpyxl
 
 ## For WHU dataset
 ### Train Unet
-1. Download dataset at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L
-2. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset
+1. Download dataset at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
+2. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset.
 3. Run_cd.py to train Unet.
+4. If you want to check the trained Unet model's performance, run predict_whu.py.
 ### Train Semi-Siamese model
+1. At Sia_train folder, run main_train.py.
+2. At models folder, run main_train.py to train model. Set Semi-Siam (with init), Siamese (with init), and Semi-Siam (without init) to train the models you want.
+3. For the model with initialization, the path to the trained Unet model needs to be updated.
+4. To test trained performance and make prediction plots, run main_pred.py.
