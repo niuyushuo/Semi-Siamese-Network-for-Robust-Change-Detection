@@ -54,5 +54,5 @@ conda install anaconda::openpyxl
 ## Test the models showed in the paper
 1. Download save_model.zip at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
 2. Unzip save_model.zip.
-3. At models folders, update the path to save_model folder in evaluator_sia.py
+3. At models folders, update the path to save_model folder in evaluator_sia.py.
 4. run main_pred.py.
