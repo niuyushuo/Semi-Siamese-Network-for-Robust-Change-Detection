@@ -68,8 +68,8 @@ scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda_rule, verbos
 
 #### Differernt loss function
 #criterion = nn.CrossEntropyLoss()
-#criterion = nn.BCELoss()
-criterion = nn.MSELoss()
+criterion = nn.BCELoss()
+#criterion = nn.MSELoss()
 #criterion = StyleLoss
 #criterion = nn.KLDivLoss(reduction="mean",log_target=True)  ###batchmean
 #criterion = content_loss
