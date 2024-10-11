@@ -24,7 +24,7 @@ def CDTrainer():
     net_G = Semi_siamese(in_channels=3, out_channels=3, init_features=32)    ###semi-siamese with weight
 
     optimizer_G = optim.AdamW(net_G.parameters(), lr=1e-4, betas=(0.9, 0.999), weight_decay=0.01)
-    exp_lr_scheduler_G = get_scheduler(optimizer_G,100) ###### lr_decay_iters
+    exp_lr_scheduler_G = get_scheduler(optimizer_G,200) ###### lr_decay_iters
 
     running_metric = ConfuseMatrixMeter(n_class=2)     ###### 2 classes
 
