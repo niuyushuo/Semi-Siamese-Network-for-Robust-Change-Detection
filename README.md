@@ -1,18 +1,21 @@
 # Semi-Siamese Network for Robust Change Detection
-Official Implementation of "Semi-Siamese Network for Robust Change Detection Across Different Domains with Applications to 3D Printing"
+Official Implementation of **"Semi-Siamese Network for Robust Change Detection Across Different Domains with Applications to 3D Printing"**
 
 ## Network
-<img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/model_architecture.png' width="500" height="400"> 
+<img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/model_architecture.png' width="500" height="400">
 
 ## Installition
+
 Create a conda environment:
-```
+
+```bash
 conda create -n python3.10_pytorch2.0 python=3.10
 conda activate python3.10_pytorch2.0
 ```
 
-Install pytorch based on your cuda version:
-```
+Install PyTorch based on your CUDA version:
+
+```bash
 nvidia-smi
 ```
 
@@ -20,12 +23,15 @@ nvidia-smi
 
 <img src='https://github.com/niuyushuo/Semi-Siamese-Network-for-Robust-Change-Detection/blob/main/images/pytorch.png' width="400" height="200">
 
-Install pytorch:
-```
+Install PyTorch:
+
+```bash
 conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
-Install the rest packages:
-```
+
+Install the remaining packages:
+
+```bash
 conda install matplotlib
 conda install esri::einops
 conda install anaconda::pandas
@@ -35,24 +41,47 @@ conda install anaconda::openpyxl
 ```
 
 ## For WHU dataset
+
 ### Train Unet
-1. Download dataset at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
-2. Unzip crop_img.zip and whu_dataset.zip.
-3. At Unet_train folder, run crop_img.py to get the crop images for WHU dataset. (Or just use the cropped images at crop_img folder)
-4. In train main_cd.py, update the path where save cropped images.
-5. Run main_cd.py to train Unet model.
-6. To check the trained Unet model's performance, update the path where save whu_dataset and path where save the trained Unet model in predict_whu.py.
-7. Run predict_whu.py.
+
+1. Download `Whu_dataset.zip` from:
+   https://drive.google.com/file/d/1TBLCNBEPVUBkFLaJpt7GhkjIKBnVhZde/view?usp=drive_link
+2. Unzip `Whu_dataset.zip`.
+3. In the `Unet_train` folder, update the dataset path in `main_cd.py`.
+4. Run `main_cd.py` to train the Unet model.
+5. To check the trained Unet model's performance, update the dataset path and the trained Unet model path in `predict_whu.py`.
+6. Run `predict_whu.py`.
+
 ### Train Semi-Siamese model
-1. At Sia_train folder, update the path where save the whu_dataset in data_config.py.
-2. At models folder, set Semi-Siam (with init), Siamese (with init), or Semi-Siam (without init) to train the models in train_sia.py.
-4. For the model with initialization, update the path to the trained Unet model in semi_with_weights.py or siamese_with_weights.py.
-5. At Sia_train folder, run main_train.py.
-6. To test trained performance and make prediction plots, update path of trained model in evaluator_sia.py.
-7. At Sia_train folder, run main_pred.py.
+
+1. At `Sia_train` folder, update the path where save the `whu_dataset` in `data_config.py`.
+2. At `models` folder, set **Semi-Siam (with init)**, **Siamese (with init)**, or **Semi-Siam (without init)** to train the models in `train_sia.py`.
+3. For the model with initialization, update the path to the trained Unet model in `semi_with_weights.py` or `siamese_with_weights.py`.
+4. At `Sia_train` folder, run `main_train.py`.
+5. To test trained performance and make prediction plots, update the path of the trained model in `evaluator_sia.py`.
+6. At `Sia_train` folder, run `main_pred.py`.
 
 ## Test the models showed in the paper
-1. Download save_model.zip at https://uconn-my.sharepoint.com/:f:/g/personal/yushuo_niu_uconn_edu/ElnZ7CR5w4NPqH96S2NnfF0BRoSKagR1rySANhSbr1KuVg?e=JhTB2L.
-2. Unzip save_model.zip.
-3. At models folders, update the path to save_model folder in evaluator_sia.py.
-4. run main_pred.py.
+
+1. Download `save_model.zip` from:
+   https://drive.google.com/file/d/1DXIj8oQ8P4rQ0WYOb25d98Qs00JGIfAp/view?usp=drive_link
+2. Unzip `save_model.zip`.
+3. At `models` folder, update the path to the `save_model` folder in `evaluator_sia.py`.
+4. Run `main_pred.py`.
+
+## Vertical Line Experimental Dataset
+
+Download the Vertical Line Experimental Dataset from:
+
+https://drive.google.com/file/d/1iJTqo5CJ_V6839YWDmoYygEac8OPmWFm/view?usp=drive_link
+
+As described in the paper, the dataset contains a total of **65 schematic images** arranged in sequential order.
+
+- Images **1–41** were used for training.
+- Images **42–49** were used for validation.
+- Images **50–57** were used for testing.
+- Images **58–65** were not included in the quantitative experiments, but model predictions and qualitative visualizations were also generated for these images.
+
+The train, validation, and test splits follow the sequential order of the schematic images, consistent with the experimental setup described in the paper.
+
+The same training and evaluation programs used for the WHU dataset can also be applied to the Vertical Line Experimental Dataset. Simply follow the instructions in the **For WHU dataset** section above and replace the WHU dataset path with the path to the Vertical Line Experimental Dataset in the corresponding configuration and training files.
