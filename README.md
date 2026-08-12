@@ -85,3 +85,20 @@ As described in the paper, the dataset contains a total of **65 schematic images
 The train, validation, and test splits follow the sequential order of the schematic images, consistent with the experimental setup described in the paper.
 
 The same training and evaluation programs used for the WHU dataset can also be applied to the Vertical Line Experimental Dataset. Simply follow the instructions in the **For WHU dataset** section above and replace the WHU dataset path with the path to the Vertical Line Experimental Dataset in the corresponding configuration and training files.
+
+## Citation
+
+If you find this repository useful in your research or projects, please consider citing our paper. We appreciate your support!
+
+```bibtex
+@inproceedings{niu2023semisiamese,
+  title={Semi-Siamese Network for Robust Change Detection Across Different Domains with Applications to 3D Printing},
+  author={Niu, Yushuo and Chadwick, Edward and Ma, Anson W. and Yang, Qian},
+  booktitle={International Conference on Computer Vision Systems (ICVS)},
+  pages={183--196},
+  year={2023},
+  publisher={Springer}
+}
+```
+
+If you have any questions or suggestions, feel free to open an issue or contact me.
