@@ -52,9 +52,11 @@ The datasets and pretrained models used in this project are archived on Zenodo:
 
 The Zenodo record contains:
 
-- `Whu_dataset.zip` — WHU dataset package used in this implementation
-- `Vertical_line.zip` — Vertical Line Experimental Dataset used in the 3D-printing experiments
+- `Whu_dataset.zip` — the publicly available WHU dataset used in this implementation
+- `Vertical_line.zip` — the original Vertical Line Experimental Dataset created by the authors of this work for the 3D-printing experiments
 - `save_model.zip` — trained models reported in the paper
+
+Please note that the **WHU dataset is an existing publicly available dataset provided by Wuhan University**, whereas the **Vertical Line Experimental Dataset is original to the authors of this work** and was created for the 3D-printing experiments presented in our paper.
 
 Google Drive download links are also provided below as backup download options.
 
@@ -109,7 +111,7 @@ To test the trained models:
 
 ## Vertical Line Experimental Dataset
 
-The **Vertical Line Experimental Dataset** introduced and used in our paper is available on Zenodo, with a Google Drive link provided as a backup download option.
+The **Vertical Line Experimental Dataset is an original dataset created by the authors of this work** for the 3D-printing experiments presented in our paper. In contrast to the publicly available WHU dataset used for cross-domain evaluation, the Vertical Line Experimental Dataset originates from our own experimental study.
 
 - **Primary download (Zenodo):** https://zenodo.org/records/22117510
 - **Backup download (Google Drive):** https://drive.google.com/file/d/1iJTqo5CJ_V6839YWDmoYygEac8OPmWFm/view?usp=drive_link
