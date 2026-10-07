@@ -81,19 +81,21 @@ Please also cite the original WHU dataset publication when using this dataset:
    https://drive.google.com/file/d/1TBLCNBEPVUBkFLaJpt7GhkjIKBnVhZde/view?usp=drive_link
 
 2. Unzip `Whu_dataset.zip`.
-3. In the `Unet_train` folder, update the dataset path in `main_cd.py`.
-4. Run `main_cd.py` to train the U-Net model.
-5. To evaluate the trained U-Net model, update the dataset path and the trained U-Net model path in `predict_whu.py`.
-6. Run `predict_whu.py`.
+3. In this GitHub repository, navigate to the `whu_dataset/Unet_train` folder.
+4. Open `main_cd.py` in `whu_dataset/Unet_train` and update the dataset path to point to the downloaded WHU dataset.
+5. Run `main_cd.py` to train the U-Net model.
+6. To evaluate the trained U-Net model, update the dataset path and the trained U-Net model path in `predict_whu.py`.
+7. Run `predict_whu.py`.
 
 ### Train Semi-Siamese Model
 
-1. In the `Sia_train` folder, update the path to the WHU dataset in `data_config.py`.
-2. In the `models` folder, select **Semi-Siam (with init)**, **Siamese (with init)**, or **Semi-Siam (without init)** for training in `train_sia.py`.
-3. For models with initialization, update the path to the trained U-Net model in `semi_with_weights.py` or `siamese_with_weights.py`.
-4. In the `Sia_train` folder, run `main_train.py`.
-5. To evaluate the trained model and generate prediction plots, update the path to the trained model in `evaluator_sia.py`.
-6. In the `Sia_train` folder, run `main_pred.py`.
+1. In this GitHub repository, navigate to the `whu_dataset/Sia_train` folder.
+2. Update the path to the downloaded WHU dataset in `data_config.py`.
+3. In the `models` folder, select **Semi-Siam (with init)**, **Siamese (with init)**, or **Semi-Siam (without init)** for training in `train_sia.py`.
+4. For models with initialization, update the path to the trained U-Net model in `semi_with_weights.py` or `siamese_with_weights.py`.
+5. Run `main_train.py` from the `whu_dataset/Sia_train` folder.
+6. To evaluate the trained model and generate prediction plots, update the path to the trained model in `evaluator_sia.py`.
+7. Run `main_pred.py` from the `whu_dataset/Sia_train` folder.
 
 ## Test the Models Reported in the Paper
 
